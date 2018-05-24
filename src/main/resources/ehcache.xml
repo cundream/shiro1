@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         updateCheck="false">
+    <diskStore path="java.io.tmpdir/Tmp_EhCache"/>
+    <defaultCache eternal="false" maxElementsInMemory="10000" overflowToDisk="true" diskPersistent="true"
+                  timeToIdleSeconds="0" timeToLiveSeconds="600000" memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="user"
+           eternal="false"
+           maxElementsInMemory="500"
+           overflowToDisk="false"
+           diskPersistent="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="300000"
+           memoryStoreEvictionPolicy="LRU"/>
+    <cache name="EAccountAuth"
+           eternal="false"
+           maxElementsInMemory="500"
+           overflowToDisk="false"
+           diskPersistent="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="300000"
+           memoryStoreEvictionPolicy="LRU"/>
+    <!-- 爬取的ip信息缓存一天到本地缓存-->
+    <cache name="ipJudements"
+           eternal="false"
+           maxElementsInMemory="2000"
+           overflowToDisk="false"
+           diskPersistent="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="86400"
+           memoryStoreEvictionPolicy="LRU"
+    />
+</ehcache>
